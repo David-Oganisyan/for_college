@@ -1,0 +1,101 @@
+{% extends "test_country/base.html" %}
+
+{% block head %}
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Красивые кнопки для сайта">
+   <meta name="author" content="HTML5BOOK">
+   <link rel="shortcut icon" href="/favicon.ico">
+   <link rel="stylesheet" type="text/css" href="single.css">
+   <style>
+      .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+      
+   </style>
+
+     <style>
+   ul.hr {
+    margin: 0;
+    padding: 4px;
+   }
+   ul.hr li {
+    display: inline;
+    margin-right: 5px;
+
+    padding: 3px;
+   }
+  </style>
+</head>
+
+{% endblock %}
+{% block title %}
+France
+{% endblock %}
+
+{% block content %}
+<form method="post">
+<!--   <h1>its for france</h1>-->
+   {{ form.subject }}<br>
+   {% csrf_token %}
+   {{ form.name }}<br>
+   {{ form.surname }}<br>
+   {{ form.course }}<br>
+   {{ form.college }}<br>
+
+<!--<p><font color="#88CC44" size="4">«Свобода, Единство, Величие»</font></p>-->
+
+   <div class="bg-light p-5 rounded mt-3 container p-3">
+      <h5><font color="#88CC44" size="6">1. Как звучит девиз Франции?</font></h5><br>
+         <font color="#88CC44" size="4">{{ form.question_1 }}</font>
+   </div>
+   <!--   -->
+   <div class="bg-light p-5 rounded mt-3 container p-3">
+      <h6><font color="#88CC44" size="6">2. Ветви каких растений изображены на гербе Франции?</font></h6><br>
+   {{ form.question_2 }}
+   </div>
+   <!--   -->
+      <div class="bg-light p-5 rounded mt-3 container p-3">
+      <h6><font color="#88CC44" size="6">3. Административным центром какого региона Франции является столица Франции — город Париж?</font></h6><br>
+         {{ form.question_3 }}
+      </div>
+   <!--   -->
+      <div class="bg-light p-5 rounded mt-3 container p-3">
+      <h5><font color="#88CC44" size="6">4. Почему Францию назвали Францией?</font></h5><br>
+         {{ form.question_4 }}
+      </div>
+   <!--   -->
+      <div class="bg-light p-5 rounded mt-3 container p-3">
+      <h5><font color="#88CC44" size="6">5. Какая птица, является одним из символов Франции?</font></h5><br>
+         {{ form.question_5 }}
+      </div>
+
+   <div class="container mt-3 outer">
+      <div class="button-container inner">
+         <button class="button">отправить</button>
+         </div>
+       </div>
+
+   <span> {{ error }}</span>
+
+</form>
+
+{% endblock %}
+
+<!--   <div class="container mt-3 outer">-->
+<!--      <div class="button-container inner">-->
+<!--         <a href="" class="sliding-button">Button</a>-->
+<!--         <a href="" class="sliding-button">Button</a>-->
+<!--         <a href="" class="sliding-button">Button</a>-->
+<!--         <a href="" class="sliding-button">Button</a>-->
+<!--      </div>-->
+<!--   </div>-->

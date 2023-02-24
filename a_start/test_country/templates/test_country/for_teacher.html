@@ -1,0 +1,41 @@
+{% extends "test_country/base.html" %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+{% block head %}
+  <style>
+   ul.hr li {
+    display: inline;
+   }
+  </style>
+{% endblock %}
+
+{% block content %}
+    <h1>About France</h1><br>
+    {% if subject %}
+        {% for el in subject %}
+            <div class="bg-light p-5 rounded mt-3 container p-3">
+                <h3>{{ el.subject }}</h3>
+                <ul class="hr">
+                        <li>{{ el.name }}</li>
+                        <li>{{ el.surname }}</li>
+                </ul>
+                <ul class="hr">
+                        <li>time: {{ el.delivery_time }}</li>
+                </ul>
+                <ul class="hr">
+                        <li>grade: {{ el.count }}</li>
+                </ul>
+                <ul class="hr">
+                        <li> id {{ el.id }}</li>
+                </ul>
+
+
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>нет записей</p>
+    {% endif %}
+
+{% endblock %}

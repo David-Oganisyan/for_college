@@ -1,0 +1,32 @@
+{% extends "test_country/base.html" %}
+
+{% block title %}
+Welcome
+{% endblock %}
+
+{% block content %}
+<h1>wfwefwefwf</h1><br>
+
+<main class="container">
+  <div class="bg-light p-5 rounded mt-3">
+    <h1>Portugal</h1>
+    <p class="lead"><h5>Португалия – самое западное европейское государство, расположенное на Пиренейском полуострове. С двух сторон – запад и юг – государство омывается Атлантическим океаном, на востоке и севере – граничит с Испанией. Страна занимает площадь 92,1 кв. км., на которой проживает 10,7 млн.</h5>
+    уровень: <font color="#88CC44" size="6">easy</font></p>
+    <a class="btn btn-lg btn-primary" href="{% url 'Portugal' %}" role="button">start</a>
+  </div>
+</main>
+<main class="container">
+  <div class="bg-light p-5 rounded mt-3">
+    <h1>France</h1>
+    <p class="lead"><h5>Франция - страна, наиболее посещаемая на Европейском континенте, 60 млн. туристов в год. После России это самая большая европейская страна. На западе и севере омывается водами Атлантического океана, Бискайского залива и пролива Ла-Манш, на юге - Средиземным морем.</h5>уровень: <font color="#FFA500" size="6">normal</font></p>
+    <a class="btn btn-lg btn-primary" href="{% url 'France' %}" role="button">start</a>
+  </div>
+</main>
+<main class="container">
+  <div class="bg-light p-5 rounded mt-3">
+    <h1>Brazil</h1>
+    <p class="lead"><h5>Крупнейшее государство Южной Америки, занимающее почти половину континента, площадью около 8,5 млн. кв. км. На севере граничит с Венесуэлой, Гайаной, Суринамом и Французской Гвианой, на юге - с Уругваем, на западе - с Аргентиной, Парагваем, Боливией и Перу, на северо-западе - с Колумбией.</h5>уровень: <font color="#FF0000" size="6">hard</font></p>
+    <a class="btn btn-lg btn-primary" href="{% url 'Brazil' %}" role="button">start</a>
+  </div>
+</main>
+{% endblock %}

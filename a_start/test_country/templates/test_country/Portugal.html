@@ -1,0 +1,88 @@
+{% extends "test_country/base.html" %}
+{% block head %}
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Красивые кнопки для сайта">
+   <meta name="author" content="HTML5BOOK">
+   <link rel="shortcut icon" href="/favicon.ico">
+   <link rel="stylesheet" type="text/css" href="single.css">
+   <style>
+      .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+   </style>
+
+     <style>
+   ul.hr {
+    margin: 0;
+    padding: 4px;
+   }
+   ul.hr li {
+    display: inline;
+    margin-right: 5px;
+
+    padding: 3px;
+   }
+  </style>
+</head>
+
+{% endblock %}
+{% block title %}
+Portugal
+{% endblock %}
+
+{% block content %}
+<form method="post">
+   {{ form.subject }}<br>
+   {% csrf_token %}
+   {{ form.name }}<br>
+   {{ form.surname }}<br>
+   {{ form.course }}<br>
+   {{ form.college }}<br>
+
+   <div class="bg-light p-5 rounded mt-3 container p-3">
+      <h5><font color="#88CC44" size="6">1. На каком полуострове расположена Португалия?</font></h5><br>
+         <font color="#88CC44" size="4">{{ form.question_1 }}</font>
+   </div>
+   <!--   -->
+   <div class="bg-light p-5 rounded mt-3 container p-3">
+      <h6><font color="#88CC44" size="6">2. С какой страной граничит Португалия?</font></h6><br>
+   {{ form.question_2 }}
+   </div>
+   <!--   -->
+      <div class="bg-light p-5 rounded mt-3 container p-3">
+      <h6><font color="#88CC44" size="6">3. Какая форма правления в Португалии?</font></h6><br>
+         {{ form.question_3 }}
+      </div>
+   <!--   -->
+      <div class="bg-light p-5 rounded mt-3 container p-3">
+      <h5><font color="#88CC44" size="6">4. Какой интернет-домен принадлежит Португалии?</font></h5><br>
+         {{ form.question_4 }}
+      </div>
+   <!--   -->
+      <div class="bg-light p-5 rounded mt-3 container p-3">
+      <h5><font color="#88CC44" size="6">5. Какой знаменитый футболист является португальцем?</font></h5><br>
+         {{ form.question_5 }}
+      </div>
+
+   <div class="container mt-3 outer">
+      <div class="button-container inner">
+         <button class="button">отправить</button>
+         </div>
+       </div>
+
+   <span> {{ error }}</span>
+
+</form>
+
+{% endblock %}

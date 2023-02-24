@@ -1,0 +1,120 @@
+{% extends "test_country/base.html" %}
+
+{% block head %}
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Красивые кнопки для сайта">
+   <meta name="author" content="HTML5BOOK">
+   <link rel="shortcut icon" href="/favicon.ico">
+   <link rel="stylesheet" type="text/css" href="single.css">
+   <style>
+      body {
+         background: #1D1B26;
+      }
+
+      h1 {
+         color: white;
+      }
+
+      p {
+         color: rgba(255, 255, 255, .8);
+      }
+
+      nav a {
+         color: rgba(255, 255, 255, .6);
+      }
+
+      .sliding-button {
+         text-decoration: none;
+         outline: none;
+         color: white;
+         display: inline-block;
+         position: relative;
+         padding: 15px 30px;
+         border: 1px solid;
+         border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+         border-image-slice: 1;
+         margin: 10px 20px;
+         font-family: 'Montserrat', sans-serif;
+         text-transform: uppercase;
+         overflow: hidden;
+         letter-spacing: 2px;
+         transition: .8s cubic-bezier(.165, .84, .44, 1);
+      }
+
+      .sliding-button:before {
+         content: '';
+         position: absolute;
+         left: 0;
+         top: 0;
+         height: 0;
+         width: 100%;
+         z-index: -1;
+         color: white;
+         background: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+         transition: .8s cubic-bezier(.165, .84, .44, 1);
+      }
+
+      .sliding-button:hover {
+         background: rgba(255, 255, 255, 0);
+      }
+
+      .sliding-button:hover:before {
+         bottom: 0%;
+         top: auto;
+         height: 100%;
+      }</style>
+</head>
+{% endblock %}
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h6></h6>
+<font color="#88CC44" size="6"><h6>next soon!</h6></font>
+<font color="#88CC44" size="6"><h6>next soon!</h6></font>
+<font color="#88CC44" size="10"><h6>next soon!</h6></font>
+<!--<form method="post">-->
+<!--   <h1>its for france</h1>-->
+<!--   {% csrf_token %}-->
+<!--   {{ form.name }}<br>-->
+<!--   {{ form.surname }}<br>-->
+<!--   {{ form.course }}<br>-->
+<!--   {{ form.college }}<br>-->
+<!--   {{ form.subject }}<br>-->
+
+<!--   <input type="checkbox" class="container-fluid" name="result_1"><br>-->
+<!--   <input type="checkbox" class="container-fluid" name="result_1"><br>-->
+<!--   {{ form.question_1 }}<br>-->
+<!--   <input type="checkbox" class="container-fluid" name="result_1"><br>-->
+<!--&lt;!&ndash;   &ndash;&gt;-->
+<!--   <input type="checkbox" class="container-fluid" name="result_2"><br>-->
+<!--   {{ form.question_2 }}<br>-->
+<!--   <input type="checkbox" class="container-fluid" name="result_2"><br>-->
+<!--   <input type="checkbox" class="container-fluid" name="result_2"><br>-->
+<!--&lt;!&ndash;   &ndash;&gt;-->
+<!--   {{ form.question_3 }}<br>-->
+<!--   <input type="checkbox" class="container-fluid" name="result_3"><br>-->
+<!--   <input type="checkbox" class="container-fluid" name="result_3"><br>-->
+<!--   <input type="checkbox" class="container-fluid" name="result_3"><br>-->
+<!--&lt;!&ndash;   &ndash;&gt;-->
+<!--   <input type="checkbox" class="container-fluid" name="result_4"><br>-->
+<!--   {{ form.question_4 }}<br>-->
+<!--   <input type="checkbox" class="container-fluid" name="result_4"><br>-->
+<!--   <input type="checkbox" class="container-fluid" name="result_4"><br>-->
+<!--&lt;!&ndash;   &ndash;&gt;-->
+<!--   <input type="checkbox" class="container-fluid" name="result_5"><br>-->
+<!--   <input type="checkbox" class="container-fluid" name="result_5"><br>-->
+<!--   {{ form.question_5 }}<br>-->
+<!--   <input type="checkbox" class="container-fluid" name="result_5"><br>-->
+
+<!--   <div class="container mt-3 outer">-->
+<!--      <div class="button-container inner">-->
+<!--         <button class="sliding-button mt-3" type="submit">отправить</button>-->
+<!--         </div>-->
+<!--      </div>-->
+   <span> {{ error }}</span>
+
+</form>
+{% endblock %}
